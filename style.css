@@ -55,10 +55,39 @@ div#game {
   line-height: 35px;
   height: 105px;
   overflow: hidden;
+  position: relative;
+}
+
+#words {
+  filter: blur(5px);
+  color: var(--textSecondary);
+}
+
+#game:focus #words {
+  filter: blur(0);
+}
+
+#focus-error {
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  padding-top: 35px;
+}
+
+#game:focus #focus-error {
+  display: none;
 }
 
 div.word {
   display: inline-block;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   margin: 0px 5px;
+}
+
+.letter.correct {
+  color: #fff;
+}
+
+.letter.incorrect {
+  color: #f55;
 }

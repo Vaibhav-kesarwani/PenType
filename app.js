@@ -22,4 +22,8 @@ function newGame() {
   }
 }
 
+document.getElementById('game').addEventListener('keyup', ev => {
+    const key = ev.key;
+});
+
 newGame();
